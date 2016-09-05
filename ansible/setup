@@ -1,0 +1,7 @@
+sudo apt-get install ansible
+generate and apply keys https://wiki.ext-inc.com/display/~riffm/using+ssh+keys
+sudo nano /etc/alsible/hosts
+add ips to hosts file
+sudo nano /usr/local/bin
+ansible all -m command -u tpx-admin --args "$*"
+run <command with parameters>
