@@ -1,0 +1,5 @@
+sudo apt-get install qemu
+scp image.vmdk to linux box
+sudo qemu-img convert -f vmdk <image name>.vmdk temp.raw
+dd if=temp.raw of=<name>.iso
+rm temp.raw
