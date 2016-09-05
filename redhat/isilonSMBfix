@@ -1,0 +1,1 @@
+SMB_CLIENT_ARGS="--max-protoco l SMB3"
