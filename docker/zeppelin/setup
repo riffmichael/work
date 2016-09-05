@@ -1,0 +1,18 @@
+SOURCE SYSTEM
+tar cvpzf /backup.tar.gz --exclude=/backup.tar.zg --one-file-system /
+scp /backup.tar.gz <user>@<docker>:/tmp/.
+ 
+DOCKER HOST
+cd /tmp
+gunzip backup.tar.gz
+cat backup.tar | docker import - zepp
+docker run -i -t -p 8080:8080 zepp /bin/bash
+ 
+DOCKER GUEST
+root@972a284a5860:/usr/local/zeppelin-0.5.5-incubating-bin-all/bin# sudo ./zeppelin-daemon.sh restart
+Zeppelin is not running
+Zeppelin start [ OK ]
+root@972a284a5860:/usr/local/zeppelin-0.5.5-incubating-bin-all/bin# netstat -na
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address Foreign Address State
+tcp6 0 0 :::8080 :::* LISTEN
