@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+<html manifest="snake.appcache">
+<head>
+<!--
+
+JavaScript Snake
+By Patrick Gillespie
+http://patorjk.com/games/snake
+
+Soure code is available here: https://github.com/patorjk/JavaScript-Snake
+
+--> 
+    <title>JavaScript Snake</title>
+    <link rel="stylesheet" type="text/css" href="https://s3-us-west-2.amazonaws.com/elasticbeanstalk-us-west-2-279582219116/snake.css" />
+    
+
+</head>
+<body>
+    <div id="game-area" tabindex="0">
+    </div>
+    
+    <div class="snake-try-again-dialog">
+
+    </div>
+    <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/elasticbeanstalk-us-west-2-279582219116/snake.js"></script>
+    <script type="text/javascript">
+    var mySnakeBoard = new SNAKE.Board(  {
+                                            boardContainer: "game-area",
+                                            fullScreen: true
+                                        });    
+    </script>
+
+
+
+
+</body>
+</html>
